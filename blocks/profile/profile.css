@@ -1,0 +1,23 @@
+/* стили профиля пользователя */ 
+.profile {
+  display: grid;
+  grid-template-columns: 128px 336px 24px 1fr 150px;
+  grid-template-rows: 64px 64px;
+  grid-template-areas: 
+  "avatar name edit-button . add-button"
+  "avatar profession profession . add-button";
+  margin: 36px 200px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .profile {
+    grid-template-columns: 1fr 18px;
+    grid-template-rows: 1fr 70px 45px 50px;
+    grid-template-areas: 
+    "avatar avatar"
+    "name edit-button"
+    "profession profession"
+    "add-button add-button";
+    margin: 36px 19px 0;
+  }
+}

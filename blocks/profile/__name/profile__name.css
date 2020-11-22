@@ -1,0 +1,22 @@
+/* стили имени профайла */
+.profile__name {
+  grid-area: name;
+  margin: 0 0 -10px 24px;
+  align-self: flex-end;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  max-width: 294px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1024px) {
+  .profile__name {
+    text-align: center;
+    font-size: 27px;
+    line-height: 33px;
+    margin: 0 0 12px 17px;
+  }
+}

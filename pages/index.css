@@ -1,0 +1,53 @@
+/* сброс стилей браузера */
+@import url("../vendor/normalize.css");
+
+
+/* подключение шрифтов */
+@import url("../vendor/fonts/fonts.css");
+
+
+/* общие стили страницы */
+@import url("../blocks/body/body.css");
+@import url("../blocks/page/page.css");
+@import url("../blocks/main/main.css");
+
+
+/* стили шапки сайта */
+@import url("../blocks/header/header.css");
+@import url("../blocks/header/__logo/header__logo.css");
+
+
+/* стили страницы пользователя */
+@import url("../blocks/profile/profile.css");
+@import url("../blocks/profile/__avatar/profile__avatar.css");
+@import url("../blocks/profile/__name/profile__name.css");
+@import url("../blocks/profile/__profession/profile__profession.css");
+@import url("../blocks/profile/__edit-button/profile__edit-button.css");
+@import url("../blocks/profile/__add-button/profile__add-button.css");
+
+
+/*стили блока elements */
+@import url("../blocks/elements/elements.css");
+@import url("../blocks/element/element.css");
+@import url("../blocks/element/__cover/element__cover.css");
+@import url("../blocks/rectangle/rectangle.css");
+@import url("../blocks/rectangle/__label/rectangle__label.css");
+@import url("../blocks/rectangle/__like/rectangle__like.css");
+@import url("../blocks/rectangle/__like/_active/rectangle__like_active.css");
+
+
+/* стили попапа */
+@import url("../blocks/popup/popup.css");
+@import url("../blocks/popup/_opened/popup_opened.css");
+@import url("../blocks/popup/__container/popup__container.css");
+@import url("../blocks/popup/__close-button/popup__close-button.css");
+@import url("../blocks/form/form.css");
+@import url("../blocks/form/__title/form__title.css");
+@import url("../blocks/form/__input-name/form__input-name.css");
+@import url("../blocks/form/__input-profession/form__input-profession.css");
+@import url("../blocks/form/__save-button/form__save-button.css");
+
+
+/* стили подвала сайта */
+@import url("../blocks/footer/footer.css");
+@import url("../blocks/footer/__copyright/footer__copyright.css");

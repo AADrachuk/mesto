@@ -1,0 +1,29 @@
+/* стили кнопки редактировать */
+.profile__edit-button {
+  grid-area: edit-button;
+  margin: 0 0 0 -2px;
+  background-image: url("../../../images/edit-button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: flex-end;
+  padding: 7px;
+  width: 24px;
+  height: 24px;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 1024px) {
+  .profile__edit-button {
+    margin: 0 0 20px -19px;
+    padding: 5px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.profile__edit-button:hover {
+  cursor: pointer;
+  opacity: 60%;
+}

@@ -1,0 +1,21 @@
+/* стили аватара пользователя */ 
+.profile__avatar {
+  margin: 2px 0 0 0;
+  grid-area: avatar;
+  background-image: url("../../../images/Jaques.jpg");
+  background-size: contain;
+  object-position: center;
+  height: 120px;
+  width: 120px;
+  background-repeat: no-repeat;
+  border-radius: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .profile__avatar {
+    margin: 3px 82px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}

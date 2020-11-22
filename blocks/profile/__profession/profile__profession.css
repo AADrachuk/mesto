@@ -1,0 +1,22 @@
+/* стили профессии профиля */
+.profile__profession {
+  grid-area: profession;
+  margin: 18px 0 0 22px;
+  align-self: flex-start;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  max-width: 336px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1024px) {
+  .profile__profession {
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+    margin: -5px 19px 0;
+  }
+}

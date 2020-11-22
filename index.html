@@ -1,0 +1,99 @@
+ <!DOCTYPE html>
+  <html lang="ru">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Александр Драчук">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Mesto Russia</title>
+  </head>
+
+  <body class="body">
+    <div class="page">
+      <header class="header">
+        <div class="header__logo"></div>
+      </header>
+
+      <main class="main">
+        <section class="profile">
+          <div class="profile__avatar"></div>
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <p class="profile__profession">Исследователь океана</p>
+          <button class="profile__edit-button"></button>
+          <button class="profile__add-button"></button>
+        </section>
+
+        <section class="elements">
+          <div class="element">
+            <img class="element__cover" src="./images/Karachaevsk.jpg" alt="Фотография Карачаевска"/>
+            <div class="rectangle">
+              <p class="rectangle__label">Карачаевск</p>
+              <button class="rectangle__like"></button>
+            </div>
+          </div>
+          
+          <div class="element">
+            <img class="element__cover" src="./images/Elbrus-1.jpg" alt="Фотография Эльбруса-1"/>
+            <div class="rectangle">
+              <p class="rectangle__label">Гора Эльбрус</p>
+              <button class="rectangle__like"></button>
+            </div>
+          </div>
+
+          <div class="element">
+            <img class="element__cover" src="./images/Dombay-1.jpg" alt="Фотография Домбая-1"/>
+            <div class="rectangle">
+              <p class="rectangle__label">Домбай</p>
+              <button class="rectangle__like"></button>
+            </div>
+          </div>
+
+          <div class="element">
+            <img class="element__cover" src="./images/Elbrus-2.jpg" alt="Фотография Эльбруса-2"/>
+            <div class="rectangle">
+              <p class="rectangle__label">Гора Эльбрус</p>
+              <button class="rectangle__like"></button>
+            </div>
+          </div>
+
+          <div class="element">
+            <img class="element__cover" src="./images/Dombay-2.jpeg" alt="Фотография Домбая-2"/>
+            <div class="rectangle">
+              <p class="rectangle__label">Домбай</p>
+              <button class="rectangle__like"></button>
+            </div>
+          </div>
+
+          <div class="element">
+            <img class="element__cover" src="./images/Cherkessia.jpg" alt="Фотография Карачаево-Черкессии"/>
+            <div class="rectangle">
+              <p class="rectangle__label">Карачаево-Черкессия</p>
+              <button class="rectangle__like"></button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="popup">
+        <div class="popup__container">
+          <button class="popup__close-button">&#215;</button>
+          <form class="form">
+            <p class="form__title">Редактировать профиль</p>
+            <input type="text" class="form__input-name" value="Жак-Ив Кусто" required>
+            <input type="text" class="form__input-profession" value="Исследователь океана" required>
+            <button class="form__save-button">Сохранить</button>
+          </form>
+        </div>
+      </div>
+      </div>
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+      </footer>
+      <script src="./scripts/popup-opener.js"></script>
+      <script src="./scripts/popup-closer.js"></script>
+      <script src="./scripts/save-button.js"></script>
+      <script src="./scripts/like-button.js"></script>
+    </div>
+  </body>
+</html>

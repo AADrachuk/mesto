@@ -1,0 +1,24 @@
+/* стили логотипа сайта */ 
+.header__logo {
+  background-image: url("../../../images/mesto-logo.png");
+  background-size: contain;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  margin: 45px 0 41px 0;
+  height: 33px;
+  min-width: 142px;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__logo {
+    margin: 28px 0 32px 27px;
+    height: 25px;
+    min-width: 105px;
+  }
+}
+
+.header__logo:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

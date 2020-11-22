@@ -1,0 +1,26 @@
+/* стили кнопки закрыть в попапе */
+.popup__close-button {
+  grid-area: button;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 960px) {
+  .popup__close-button {
+    font-size: 26px;
+    font-weight: 400;
+  }
+}
+
+.popup__close-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.popup__close-button:focus {
+  outline: none;
+}

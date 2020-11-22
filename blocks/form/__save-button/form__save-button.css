@@ -1,0 +1,35 @@
+/* стили кнопки сохранить в форме */ 
+.form__save-button {
+  margin: 50px 36px 37px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  width: 358px;
+  height: 50px;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 960px) {
+  .form__save-button {
+    margin: 45px 22px 25px;
+    width: 238px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.form__save-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.form__save-button:focus {
+  outline: none;
+}

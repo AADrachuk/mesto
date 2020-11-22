@@ -1,0 +1,23 @@
+/* стили кнопки лайка */ 
+.rectangle__like {
+  background-image: url("../../../images/like.svg");
+  background-size: contain;
+  box-sizing: border-box;
+  height: 19px;
+  width: 21px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  border: none;
+  align-self: center;
+  transition: 0.5s;
+}
+
+.rectangle__like:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
+.rectangle__like:focus {
+  outline: none;
+}
