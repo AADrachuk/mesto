@@ -1,6 +1,7 @@
 /* стили блока elements */ 
 .elements {
-  margin: 0 200px;
+  max-width: calc(100% - 2*200px);
+  margin: 0 auto;
   padding-top: 47px;
   max-width: 100%;
   display: grid;
@@ -20,8 +21,8 @@
 @media screen and (max-width: 960px) {
   .elements {
     align-self: center;
-    margin: 0 auto;
     max-width: calc(100% - 2*19px);
+    margin: 0 auto;
     column-gap: 0;
     padding-top: 36px;
     grid-template-columns: repeat(1, minmax(180px, 1fr));

@@ -4,11 +4,12 @@
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px solid #545454;
-  margin: 0 200px;
+  width: calc(100% - 2*200px);
+  margin: 0 auto;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 960px) {
   .header {
-    margin: 0;
+    width: 100%;
   }
 }

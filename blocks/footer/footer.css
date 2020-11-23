@@ -3,11 +3,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 200px;
+  max-width: calc(100% - 2*200px);
+  margin: 0 auto;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 960px) {
   .footer {
+    max-width: calc(100% - 2*19px);
     margin: 0 19px;
   }
 }

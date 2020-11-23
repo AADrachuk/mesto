@@ -1,12 +1,13 @@
 /* стили профиля пользователя */ 
 .profile {
   display: grid;
-  grid-template-columns: 128px 336px 24px 1fr 150px;
-  grid-template-rows: 64px 64px;
+  grid-template-columns: 1fr min(336px) 24px 2fr 150px;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas: 
   "avatar name edit-button . add-button"
   "avatar profession profession . add-button";
-  margin: 36px 200px 0;
+  max-width: calc(100% - 2*200px);
+  margin: 36px auto 0;
 }
 
 @media screen and (max-width: 1024px) {
@@ -18,6 +19,7 @@
     "name edit-button"
     "profession profession"
     "add-button add-button";
-    margin: 36px 19px 0;
+    max-width: calc(100% - 2*19px);
+    margin: 36px auto 0;
   }
 }

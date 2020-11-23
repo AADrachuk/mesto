@@ -5,8 +5,8 @@
   background-image: url("../../../images/Jaques.jpg");
   background-size: contain;
   object-position: center;
-  height: 120px;
   width: 120px;
+  height: 120px;
   background-repeat: no-repeat;
   border-radius: 100px;
 }
