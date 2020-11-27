@@ -10,8 +10,9 @@
   line-height: 48px;
   max-width: 294px;
   color: #ffffff;
-  word-wrap: break-word;
-  
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1024px) {

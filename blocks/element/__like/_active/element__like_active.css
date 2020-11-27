@@ -1,4 +1,4 @@
 /* стили активного лайка */ 
-.rectangle__like_active {
+.element__like_active {
   background-image: url("../../../../images/like_active.svg");
 }

@@ -20,69 +20,69 @@
           <div class="profile__avatar"></div>
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <p class="profile__profession">Исследователь океана</p>
-          <button class="profile__edit-button"></button>
-          <button class="profile__add-button"></button>
+          <button aria-label="Edit profile" type="button" class="profile__edit-button"></button>
+          <button aria-label="Add card" type="button" class="profile__add-button"></button>
         </section>
 
         <section class="elements">
-          <div class="element">
+          <article class="element">
             <img class="element__cover" src="./images/Karachaevsk.jpg" alt="Фотография Карачаевска"/>
-            <div class="rectangle">
-              <p class="rectangle__label">Карачаевск</p>
-              <button class="rectangle__like"></button>
+            <div class="element__plate">
+              <h2 class="element__label">Карачаевск</h2>
+              <button aria-label="Like" type="button" class="element__like"></button>
             </div>
-          </div>
+          </article>
           
-          <div class="element">
+          <article class="element">
             <img class="element__cover" src="./images/Elbrus-1.jpg" alt="Фотография Эльбруса-1"/>
-            <div class="rectangle">
-              <p class="rectangle__label">Гора Эльбрус</p>
-              <button class="rectangle__like"></button>
+            <div class="element__plate">
+              <h2 class="element__label">Гора Эльбрус</h2>
+              <button aria-label="Like" type="button" class="element__like"></button>
             </div>
-          </div>
+          </article>
 
-          <div class="element">
+          <article class="element">
             <img class="element__cover" src="./images/Dombay-1.jpg" alt="Фотография Домбая-1"/>
-            <div class="rectangle">
-              <p class="rectangle__label">Домбай</p>
-              <button class="rectangle__like"></button>
+            <div class="element__plate">
+              <h2 class="element__label">Домбай</h2>
+              <button aria-label="Like" type="button" class="element__like"></button>
             </div>
-          </div>
+          </article>
 
-          <div class="element">
+          <article class="element">
             <img class="element__cover" src="./images/Elbrus-2.jpg" alt="Фотография Эльбруса-2"/>
-            <div class="rectangle">
-              <p class="rectangle__label">Гора Эльбрус</p>
-              <button class="rectangle__like"></button>
+            <div class="element__plate">
+              <h2 class="element__label">Гора Эльбрус</h2>
+              <button aria-label="Like" type="button" class="element__like"></button>
             </div>
-          </div>
+          </article>
 
-          <div class="element">
+          <article class="element">
             <img class="element__cover" src="./images/Dombay-2.jpeg" alt="Фотография Домбая-2"/>
-            <div class="rectangle">
-              <p class="rectangle__label">Домбай</p>
-              <button class="rectangle__like"></button>
+            <div class="element__plate">
+              <h2 class="element__label">Домбай</h2>
+              <button aria-label="Like" type="button" class="element__like"></button>
             </div>
-          </div>
+          </article>
 
-          <div class="element">
+          <article class="element">
             <img class="element__cover" src="./images/Cherkessia.jpg" alt="Фотография Карачаево-Черкессии"/>
-            <div class="rectangle">
-              <p class="rectangle__label">Карачаево-Черкессия</p>
-              <button class="rectangle__like"></button>
+            <div class="element__plate">
+              <h2 class="element__label">Карачаево-Черкессия</h2>
+              <button aria-label="Like" type="button" class="element__like"></button>
             </div>
-          </div>
+          </article>
         </section>
       </main>
 
       <div class="popup">
         <div class="popup__container">
-          <button class="popup__close-button">&#215;</button>
-          <form class="form">
-            <p class="form__title">Редактировать профиль</p>
-            <input type="text" class="form__input-name" value="Жак-Ив Кусто" maxlenght="30" required>
-            <input type="text" class="form__input-profession" value="Исследователь океана" maxlenght="30" required>
-            <button class="form__save-button">Сохранить</button>
+          <button aria-label="Закрыть без сохранения" type="reset" class="popup__close-button">&#215;</button>
+          <form name="Edit profile" class="popup__form" action="#" method="post" enctype="text/plain" autocomplete="off" novalidate>
+            <h2 class="popup__form-title">Редактировать профиль</h2>
+            <input type="text" class="popup__form-input popup__form-input_name" value="" maxlength="30" autocomplete="off" required>
+            <input type="text" class="popup__form-input popup__form-input_profession" value="" maxlength="30" autocomplete="off" required>
+            <button aria-label="Save" type="submit" class="popup__form-submit">Сохранить</button>
           </form>
         </div>
       </div>
@@ -90,9 +90,6 @@
       <footer class="footer">
         <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
       </footer>
-      <script src="./scripts/popup-opener.js"></script>
-      <script src="./scripts/popup-closer.js"></script>
-      <script src="./scripts/save-button.js"></script>
-      <script src="./scripts/like-button.js"></script>
+      <script src="./scripts/index.js"></script>
   </body>
 </html>

@@ -1,7 +1,7 @@
 /* стили профиля пользователя */ 
 .profile {
   display: grid;
-  grid-template-columns: 1fr min(336px) 24px 2fr 150px;
+  grid-template-columns: 1fr 336px 24px 2fr 150px;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 
   "avatar name edit-button . add-button"
@@ -20,6 +20,5 @@
     "profession profession"
     "add-button add-button";
     max-width: calc(100% - 2*19px);
-    margin: 36px auto 0;
   }
 }

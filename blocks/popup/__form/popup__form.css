@@ -1,5 +1,5 @@
 /* стиль формы ввода */ 
-.form {
+.popup__form {
   grid-area: form;
   display: flex;
   flex-direction: column;
@@ -9,8 +9,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .form {
+  .popup__form {
     width: 282px;
-    height: 322px;
   }
 }

@@ -1,5 +1,5 @@
 /* стили кнопки сохранить в форме */ 
-.form__save-button {
+.popup__form-submit {
   margin: 50px 36px 37px;
   background-color: #000000;
   color: #ffffff;
@@ -16,7 +16,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .form__save-button {
+  .popup__form-submit {
     margin: 45px 22px 25px;
     width: 238px;
     padding: 13px;
@@ -25,11 +25,11 @@
   }
 }
 
-.form__save-button:hover {
+.popup__form-submit:hover {
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
-.form__save-button:focus {
+.popup__form-submit:focus {
   outline: none;
 }
