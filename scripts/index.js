@@ -5,8 +5,8 @@ let closeProfile = document.querySelector('.popup__close-button'); // кнопк
 
 
 let formElement = popup.querySelector('.popup__form');
-let nameInput = popup.querySelector('.popup__form-input_name');
-let jobInput = popup.querySelector('.popup__form-input_profession');
+let nameInput = popup.querySelector('.popup__form-input_name_default');
+let jobInput = popup.querySelector('.popup__form-input_profession_default');
 
 
 let nameEdited = document.querySelector('.profile__name');
@@ -16,18 +16,14 @@ let jobEdited = document.querySelector('.profile__profession');
 /* кнопка открытия попапа */ 
 function popupOpener() {
     popup.classList.add('popup_opened');
-    nameInput.setAttribute('value', nameEdited.textContent);
+    nameInput.value = nameEdited.textContent;
     jobInput.value = jobEdited.textContent;
 } 
-editProfile.addEventListener('click', popupOpener);
-
 
 /* кнопка закрытия попапа */ 
 function popupCloser() {
     popup.classList.remove('popup_opened');
 }
-closeProfile.addEventListener('click', popupCloser);
-
 
 /* кнопка сохранить форму */ 
 function formSubmitHandler (evt) {
@@ -37,4 +33,7 @@ function formSubmitHandler (evt) {
     jobEdited.textContent = jobInput.value;
     popupCloser();
 }
+
+editProfile.addEventListener('click', popupOpener);
+closeProfile.addEventListener('click', popupCloser);
 formElement.addEventListener('submit', formSubmitHandler);
