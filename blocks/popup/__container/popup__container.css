@@ -1,22 +1,20 @@
 /* стили попапа */ 
 .popup__container {
-  position: fixed;
   display: grid;
-  max-width: 480px;
   grid-template-columns: 430px, 50px;
-  grid-template-rows: 50px 330px;
+  grid-template-rows: 50px max-content max-content;
   grid-template-areas: 
   ". button"
-  "form .";
+  "form ."
+  "figure .";
 }
 
 @media screen and (max-width: 960px) {
   .popup__container {
-    max-width: 282px;
-    grid-template-columns: 263px 19px;
-    grid-template-rows: 50px 322px;
+    grid-template-columns: 263px, 19px;
     grid-template-areas: 
     ". button"
-    "form form";
+    "form form"
+    "figure figure";
   }
 }

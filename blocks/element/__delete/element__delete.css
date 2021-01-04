@@ -1,0 +1,25 @@
+/* стили кнопки удаления карточки */ 
+.element__delete {
+    position: absolute;
+    margin: 18px 15px 0 0;
+    background-image: url("../../../images/delete.svg");
+    background-size: contain;
+    box-sizing: border-box;
+    width: 21px;
+    padding: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    align-self: flex-end;
+    transition: 0.5s;
+  }
+  
+.element__delete:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+  
+.element__delete:focus {
+    outline: none;
+}

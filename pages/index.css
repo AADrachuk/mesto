@@ -29,10 +29,12 @@
 /*стили блока elements */
 @import url("../blocks/elements/elements.css");
 @import url("../blocks/element/element.css");
+@import url("../blocks/element/__delete/element__delete.css");
 @import url("../blocks/element/__cover/element__cover.css");
 @import url("../blocks/element/__plate/element__plate.css");
 @import url("../blocks/element/__label/element__label.css");
 @import url("../blocks/element/__like/element__like.css");
+@import url("../blocks/element/__like/_active/element__like_active.css");
 
 
 /* стили попапа */
@@ -45,7 +47,12 @@
 @import url("../blocks/popup/__form-input/popup__form-input.css");
 @import url("../blocks/popup/__form-input/_name/popup__form-input_name_default.css");
 @import url("../blocks/popup/__form-input/_profession/popup__form-input_profession_default.css");
+@import url("../blocks/popup/__form-input/_label/popup__form-input_label.css");
+@import url("../blocks/popup/__form-input/_src/popup__form-input_src.css");
 @import url("../blocks/popup/__form-submit/popup__form-submit.css");
+@import url("../blocks/popup/__figure/popup__figure.css");
+@import url("../blocks/popup/__image/popup__image.css");
+@import url("../blocks/popup/__caption/popup__caption.css");
 
 
 /* стили подвала сайта */

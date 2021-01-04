@@ -1,0 +1,12 @@
+/*стиль рисунка попапа*/
+.popup__figure {
+  display: grid;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  grid-area: figure;
+  
+  max-width: 75vw;
+  max-height: 75vh;
+}

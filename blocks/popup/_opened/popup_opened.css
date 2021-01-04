@@ -1,4 +1,6 @@
 /* модификатор для открытия попапа */
 .popup_opened {
   display: flex;
+  visibility: visible;
+  opacity: 1;
 }
