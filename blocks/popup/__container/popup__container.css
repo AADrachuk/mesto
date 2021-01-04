@@ -11,7 +11,7 @@
 
 @media screen and (max-width: 960px) {
   .popup__container {
-    grid-template-columns: 263px, 19px;
+    grid-template-columns: max-content 19px;
     grid-template-areas: 
     ". button"
     "form form"
