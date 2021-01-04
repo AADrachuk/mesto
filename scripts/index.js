@@ -105,7 +105,6 @@ function formSubmitHandler(evt) {
             coverElement.setAttribute("alt", "Фотография " + labelInput.value);
 
             document.querySelector(".elements").prepend(elementItem);
-
         }
         pressedButton.closest(".popup").classList.remove("popup_opened");
     }
@@ -116,8 +115,10 @@ function imageOpener(evt) {
   if (pressedImage.classList.contains("element__cover")) {
     popupOpener(popupImage);
     const imageSrc = pressedImage.closest(".element").querySelector(".element__cover");
+    const captionSrc = pressedImage.closest(".element").querySelector(".element__label")
     popupSrcImage.setAttribute("src", imageSrc.getAttribute("src"));
-    popupImageCaption.textContent = pressedImage.closest(".element").querySelector(".element__label").textContent;
+    popupSrcImage.setAttribute("alt", captionSrc.textContent);
+    popupImageCaption.textContent = captionSrc.textContent;
   }
 }
 
@@ -129,6 +130,8 @@ editProfile.addEventListener("click", function() {
 });
 addCard.addEventListener("click", function() {
     popupOpener(popupNewCard);
+    labelInput.value = "Название места";
+    srcInput.value = "Ссылка на картинку";
 });
 
 root.addEventListener("click", popupCloser);
