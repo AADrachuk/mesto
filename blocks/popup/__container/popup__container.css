@@ -1,7 +1,7 @@
 /* стили попапа */ 
 .popup__container {
   display: grid;
-  grid-template-columns: 430px, 50px;
+  grid-template-columns: max-content 50px;
   grid-template-rows: 50px max-content max-content;
   grid-template-areas: 
   ". button"
