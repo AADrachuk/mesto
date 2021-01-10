@@ -1,0 +1,10 @@
+/* стили сообщения об ошибке инпутов формы */ 
+.popup__error {
+    margin: 5px 36px 0 36px;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+    font-style: normal;
+    color: #FF0000;
+    display: none;
+}

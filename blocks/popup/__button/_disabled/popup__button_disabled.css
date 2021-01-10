@@ -1,0 +1,6 @@
+/* стили неактивной кнопки сохранить в форме */ 
+.popup__button_disabled {
+    background-color: #e9e9e9;
+    color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
