@@ -20,8 +20,7 @@ const jobEdited = document.querySelector(".profile__profession");
 const labelInput = document.querySelector(".popup__input_label");
 const srcInput = document.querySelector(".popup__input_src");
 
-const closeButtons = document.querySelectorAll(".popup__close-button");
-
+const popupsList = document.querySelectorAll(".popup");
 
 /* объявление функций */
 function handleRemoveCard(evt) {
@@ -53,54 +52,57 @@ function renderItem(item) {
   deleteCardBtn.addEventListener("click", handleRemoveCard);
   likeCardBtn.addEventListener("click", handleLikeCard);
   srcElement.addEventListener("click", function () {
-    handleOpenImagePopup(item);
+    openImagePopup(item);
   });
 
   return elementItem;
 }
 
-function closeByEscape (popup) {
-  window.addEventListener("keydown", function(evt) {
-    if (evt.keyCode === 27) {
-      handleClosePopup(popup);
-    }
+function closeByEscape(evt) {
+  if (evt.key === "Escape") {
+    const openedPopup = document.querySelector(".popup_opened");
+    closePopup(openedPopup);
+  }
+}
+
+function closeByOverlay(evt) {
+  popupsList.forEach((popup) => {
+    popup.addEventListener("click", function (evt) {
+      if (
+        evt.target.classList.contains("popup_opened") ||
+        evt.target.classList.contains("popup__container") ||
+        evt.target.classList.contains("popup__close-button")
+      ) {
+        closePopup(popup);
+      }
+    });
   });
 }
 
-function closeByOverlay(popup) {
-  popup.addEventListener("click", function(evt) {
-    const overlayClick = evt.target.classList.contains("popup_opened");
-    const containerClick = evt.target.classList.contains("popup__container");
-    if (overlayClick || containerClick) {
-      handleClosePopup(popup);
-    };
-  });
-}
-
-function handleOpenFormPopup(popup) {
+function openPopup(popup) {
   popup.classList.add("popup_opened");
-  closeByEscape(popup);
-  closeByOverlay(popup);
+  document.addEventListener("keydown", closeByEscape);
+  document.addEventListener("click", closeByOverlay);
 }
 
-function handleOpenImagePopup(popup) {
-  handleOpenFormPopup(popupImage);
+function openImagePopup(popup) {
+  openPopup(popupImage);
   popupImageCaption.textContent = popup.name;
   popupImageSrc.src = popup.link;
   popupImageSrc.alt = "Фотография " + popup.name;
 }
 
-function handleClosePopup(popup) {
+function closePopup(popup) {
   popup.classList.remove("popup_opened");
-  window.removeEventListener("keydown", closeByEscape);
-  popup.removeEventListener("click", closeByOverlay);
+  document.removeEventListener("keydown", closeByEscape);
+  document.removeEventListener("click", closeByOverlay);
 }
 
 function handleProfileSubmit(evt) {
   evt.preventDefault();
   nameEdited.textContent = nameInput.value;
   jobEdited.textContent = jobInput.value;
-  handleClosePopup(evt.target.closest(".popup"));
+  closePopup(evt.target.closest(".popup"));
 }
 
 function handleCardSubmit(evt) {
@@ -108,32 +110,20 @@ function handleCardSubmit(evt) {
   const newCardInputs = { name: labelInput.value, link: srcInput.value };
   elementsContainer.prepend(renderItem(newCardInputs));
   addCardForm.reset();
-  handleClosePopup(evt.target.closest(".popup"));
+  closePopup(evt.target.closest(".popup"));
 }
-
 
 /* слушатели событий */
 editProfileBtn.addEventListener("click", function () {
   nameInput.value = nameEdited.textContent;
   jobInput.value = jobEdited.textContent;
-  handleOpenFormPopup(popupEditProfile);
+  openPopup(popupEditProfile);
 });
 addCardBtn.addEventListener("click", function () {
-  handleOpenFormPopup(popupNewCard);
+  openPopup(popupNewCard);
 });
-editProfileForm.addEventListener("submit", function (evt) {
-  handleProfileSubmit(evt);
-});
-addCardForm.addEventListener("submit", function (evt) {
-  handleCardSubmit(evt);
-});
-
-closeButtons.forEach((item) => {
-  item.addEventListener("click", function (evt) {
-    handleClosePopup(evt.target.closest(".popup"));
-  });
-});
-
+editProfileForm.addEventListener("submit", handleProfileSubmit);
+addCardForm.addEventListener("submit", handleCardSubmit);
 
 /* вызов функций */
 renderList();

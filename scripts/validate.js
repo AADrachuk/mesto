@@ -57,6 +57,9 @@ function enableValidation(config) {
   const forms = document.querySelectorAll(config.formSelector);
 
   forms.forEach((form) => {
+    form.addEventListener("submit", function(evt) {
+      evt.preventDefault();
+    });
     setEventListener(form, config);
     const submitButton = form.querySelector(config.submitButtonSelector);
     setButtonState(submitButton, form.checkValidity(), config);
