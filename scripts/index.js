@@ -65,24 +65,9 @@ function closeByEscape(evt) {
   }
 }
 
-function closeByOverlay(evt) {
-  popupsList.forEach((popup) => {
-    popup.addEventListener("click", function (evt) {
-      if (
-        evt.target.classList.contains("popup_opened") ||
-        evt.target.classList.contains("popup__container") ||
-        evt.target.classList.contains("popup__close-button")
-      ) {
-        closePopup(popup);
-      }
-    });
-  });
-}
-
 function openPopup(popup) {
   popup.classList.add("popup_opened");
   document.addEventListener("keydown", closeByEscape);
-  document.addEventListener("click", closeByOverlay);
 }
 
 function openImagePopup(popup) {
@@ -95,7 +80,6 @@ function openImagePopup(popup) {
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
   document.removeEventListener("keydown", closeByEscape);
-  document.removeEventListener("click", closeByOverlay);
 }
 
 function handleProfileSubmit(evt) {
@@ -124,6 +108,21 @@ addCardBtn.addEventListener("click", function () {
 });
 editProfileForm.addEventListener("submit", handleProfileSubmit);
 addCardForm.addEventListener("submit", handleCardSubmit);
+
+
+/* перебор псевдомассива */
+popupsList.forEach((popup) => {
+  popup.addEventListener("click", function (evt) {
+    if (
+      evt.target.classList.contains("popup_opened") ||
+      evt.target.classList.contains("popup__container") ||
+      evt.target.classList.contains("popup__close-button")
+    ) {
+      closePopup(popup);
+    }
+  });
+});
+
 
 /* вызов функций */
 renderList();
