@@ -51,7 +51,7 @@
               <span id="place-input-error" class="popup__error"></span>
               <input type="url" id="url-input" class="popup__input popup__input_src" value="" placeholder="Вставить ссылку" autocomplete="off" required>
               <span id="url-input-error" class="popup__error"></span>
-              <button aria-label="Save" type="submit" class="popup__button">Создать</button>
+              <button aria-label="Save" type="submit" class="popup__button popup__button_disabled">Создать</button>
             </form>
           </div>
         </div>
@@ -71,19 +71,17 @@
       </footer>
     </div>
 
-    <template class="template">
+    <template id="card-template" class="template">
       <article class="element">
         <img class="element__cover" src="#" alt="Не загрузилось"/>
-        <button aria-label="Delete" type="button" class="element__delete"></button>
+        <button id="delete-button" aria-label="Delete" type="button" class="element__delete"></button>
         <div class="element__plate">
           <h2 class="element__label"></h2>
-          <button aria-label="Like" type="button" class="element__like"></button>
+          <button id="like-button" aria-label="Like" type="button" class="element__like"></button>
         </div>
       </article>
     </template>
 
-    <script src="./scripts/initial-сards.js"></script>
-    <script src="./scripts/index.js"></script>
-    <script src="./scripts/validate.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
